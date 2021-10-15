@@ -2,6 +2,7 @@ html,
 body,
 .app {
   margin: 0;
+  padding: 0 12px;
   height: 100%;
   font-family: sans-serif;
   background-color: bisque;
@@ -37,7 +38,10 @@ button[disabled] {
   flex-shrink: 1;
 }
 .bottom {
-  margin-bottom: 80px;
+  margin-bottom: 60px;
+}
+.title {
+  font-size: 36px;
 }
 #choice-input {
   padding: 4px 8px;
@@ -52,6 +56,7 @@ button[disabled] {
   fill: white !important;
 }
 #choice-form {
+  margin-top: 12px;
   display: flex;
   justify-content: center;
 }
