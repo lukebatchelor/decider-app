@@ -1,0 +1,13 @@
+{
+  "name": "decider",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "http-server -c-1 .",
+    "build": "touch dist && rm -rf dist && mkdir dist && cp *.html *.js *.css *.ico dist/"
+  },
+  "devDependencies": {
+    "http-server": "^13.0.2"
+  }
+}

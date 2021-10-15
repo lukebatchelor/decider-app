@@ -1,0 +1,61 @@
+html,
+body,
+.app {
+  margin: 0;
+  height: 100%;
+  font-family: sans-serif;
+  background-color: bisque;
+}
+button {
+  padding: 8px 12px;
+  border-radius: 4px;
+  background: royalblue;
+  color: white;
+  font-weight: 500;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.top {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-shrink: 1;
+}
+.bottom {
+  margin-bottom: 80px;
+}
+#choice-input {
+  padding: 8px 12px;
+}
+.choices-container {
+  flex-grow: 1;
+  margin-top: 30px;
+}
+.choicebox {
+  border: 1px solid grey;
+  padding: 8px 12px;
+  margin-bottom: 12px;
+  border-radius: 4px;
+}
+.chosen {
+  background-color: green;
+  color: white;
+}
+button[disabled] {
+  background-color: grey;
+  color: black;
+}
+#confetti {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
