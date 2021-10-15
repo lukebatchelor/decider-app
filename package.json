@@ -5,7 +5,7 @@
   "license": "MIT",
   "scripts": {
     "dev": "http-server -c-1 ./src",
-    "build": "touch dist && rm -rf dist && mkdir dist && cp src/*.{html,css,js,ico,png} dist/"
+    "build": "touch dist && rm -rf dist && mkdir dist && cp src/*.{html,css,js,ico,png,json} dist/"
   },
   "devDependencies": {
     "http-server": "^13.0.2"

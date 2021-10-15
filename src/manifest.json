@@ -1,0 +1,10 @@
+{
+  "name": "Decide 4 Me",
+  "short_name": "Decide4Me",
+  "theme_color": "#fff",
+  "background_color": "#ffe4c4",
+  "display": "browser",
+  "orientation": "portrait",
+  "scope": "/",
+  "start_url": "/"
+}
