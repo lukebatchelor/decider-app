@@ -6,6 +6,10 @@ const choicesContainer = document.querySelector(".choices-container");
 const addChoiceButton = document.querySelector(".add-button");
 const choiceForm = document.querySelector("form#choice-form");
 const chooseButton = document.getElementById("choose-button");
+const confetti = new ConfettiGenerator({
+  target: "confetti",
+  animate: true,
+});
 
 window.addEventListener("DOMContentLoaded", init);
 
@@ -25,12 +29,13 @@ function onChoiceAdd(e) {
   choiceInput.focus();
 }
 function onChooseForMeClick() {
-  renderChoices(); /* Clear out any previous choices */
+  confetti.clear(); /* Clear out any previous confetti or choices */
+  renderChoices();
   const choiceIdx = Math.floor(Math.random() * state.choices.length);
   const choiceBoxes = document.querySelectorAll(".choicebox");
   const chosenBox = choiceBoxes[choiceIdx];
 
-  let timeToWaitMs = 5000;
+  let timeToWaitMs = 5000 + Math.random() * 3000;
   let timeStarted = new Date();
   let highlighted = 0;
 
@@ -38,15 +43,12 @@ function onChooseForMeClick() {
     const timeWaited = new Date() - timeStarted;
     if (timeWaited > timeToWaitMs) {
       clearInterval(interval);
-      chosenBox.classList.add("chosen");
-      const confetti = new ConfettiGenerator({
-        target: "confetti",
-        animate: true,
-      });
+      chosenBox.classList.add("choicebox__chosen");
       confetti.render();
+      chooseButton.innerText = "Choose Another!";
     }
-    choiceBoxes.forEach((cb) => cb.classList.remove("chosen"));
-    choiceBoxes[highlighted].classList.add("chosen");
+    choiceBoxes.forEach((cb) => cb.classList.remove("choicebox__chosen"));
+    choiceBoxes[highlighted].classList.add("choicebox__chosen");
     highlighted = (highlighted + 1) % choiceBoxes.length;
   }, 100);
 }

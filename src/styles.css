@@ -7,11 +7,18 @@ body,
   background-color: bisque;
 }
 button {
-  padding: 8px 12px;
+  padding: 6px 8px;
   border-radius: 4px;
   background: royalblue;
   color: white;
   font-weight: 500;
+  font-size: 1.4em;
+  line-height: 1;
+}
+button[disabled] {
+  background-color: #ececec;
+  color: #adadad;
+  cursor: not-allowed;
 }
 
 .app {
@@ -33,26 +40,38 @@ button {
   margin-bottom: 80px;
 }
 #choice-input {
-  padding: 8px 12px;
+  padding: 4px 8px;
+  font-size: 1.2em;
+  margin-right: 12px;
+  border-radius: 4px;
+  text-align: center;
+  background: transparent;
+  border: 1px solid;
+}
+.add-button {
+  fill: white !important;
+}
+#choice-form {
+  display: flex;
+  justify-content: center;
 }
 .choices-container {
   flex-grow: 1;
   margin-top: 30px;
 }
 .choicebox {
-  border: 1px solid grey;
+  min-width: 50vw;
   padding: 8px 12px;
   margin-bottom: 12px;
+  border: 1px solid grey;
   border-radius: 4px;
+  text-align: center;
 }
-.chosen {
+.choicebox__chosen {
   background-color: green;
   color: white;
 }
-button[disabled] {
-  background-color: grey;
-  color: black;
-}
+
 #confetti {
   position: fixed;
   top: 0;

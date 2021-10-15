@@ -160,7 +160,7 @@
     }
     return {
       render: function () {
-        (t.width = a.width), (t.height = a.height), (r = []);
+        (a.animate = !0), (t.width = a.width), (t.height = a.height), (r = []);
         for (var e = 0; e < a.max; e++) r.push(s());
         return requestAnimationFrame(function e() {
           for (var t in (o.clearRect(0, 0, a.width, a.height), r)) l(r[t]);
