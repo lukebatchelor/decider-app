@@ -4,8 +4,8 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "dev": "http-server -c-1 .",
-    "build": "touch dist && rm -rf dist && mkdir dist && cp *.html *.js *.css *.ico dist/"
+    "dev": "http-server -c-1 ./src",
+    "build": "touch dist && rm -rf dist && mkdir dist && cp src/*.{html,css,js,ico,png} dist/"
   },
   "devDependencies": {
     "http-server": "^13.0.2"
