@@ -65,7 +65,7 @@ button[disabled] {
   margin-top: 30px;
 }
 .choicebox {
-  min-width: 50vw;
+  min-width: min(50vw, 500px);
   padding: 8px 12px;
   margin-bottom: 12px;
   border: 1px solid grey;
